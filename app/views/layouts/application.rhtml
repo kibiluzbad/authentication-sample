@@ -1,0 +1,52 @@
+<html>
+<head>
+	<title>Authlogic sample</title>
+	<style>
+	html{
+		font-family:arial;
+		font-size:12px;
+		color:#333;			
+	}
+	
+	#wrapper{
+		width:922px;
+		margin: 0 auto;	
+	}
+
+	#content{
+		width:100%;
+		padding:20px;
+	}
+	
+	#notice{
+		background-color:#DFF5E4;
+		border: 1px solid #21C249;
+		padding:10px;
+	}
+
+	a{
+		text-decoration:none;
+	}
+	a:visited{
+		color: #00f;
+	}
+	a:hover{
+		text-decoration:underline;
+	}
+	.errorExplanation{
+		background-color:#FCD2D2;
+		border: 1px solid #FA2323;
+		padding:10px;
+	}
+	.errorExplanation h2{
+		font-size: 12px;
+	}
+	</style>
+</head>
+<body>
+<div id="wrapper">
+	<%if flash[:notice]	-%><div id="notice""><%=h flash[:notice] -%></div><% end -%>
+	<div><%= yield %></div>
+</div>
+<body>
+</html>
